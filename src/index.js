@@ -26,5 +26,12 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    let result = 0;
+    if (arguments.length && array.length !== 0) {
+        for (let i = 0; i < array.length; i++) {
+            result += array[i];
+        }
+        result /= array.length;
+    }
+    return result;
 }
